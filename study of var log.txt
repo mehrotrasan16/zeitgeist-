@@ -1,0 +1,11 @@
+Study of Var/log
+
+the system logs and most application logs are located in the root/var/logs folder;
+
+lsing into the folder one of the folders we find are the cups folder for external printers drives and requests, 
+
+also a tool to directly view the sys logs can be using the dmesg tool
+
+the format of the logs are as follows
+[epoch time(probably] process/process description: log.
+this can be written to and read using the -d or -n argument to dmesg (ref the bookmark htg in Btech propj folder)

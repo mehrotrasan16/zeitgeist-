@@ -1,0 +1,27 @@
+by importing the subprocess module one can check out a lot of stuff.
+
+os.popen has been replaced by subprocess.Popen now
+
+Instead of using the system method of the os-Module 
+os.system('touch xyz')
+
+we can use the Popen() command of the subprocess Module. By using Popen() we are capable to get the output of the script:
+
+>>> x = subprocess.Popen(['touch', 'xyz'])
+>>> print x
+
+>>> x.poll()
+0
+>>> x.returncode
+0
+
+The shell command cp -r xyz abc can be send to the shell from Python by using the Popen() method of the subprocess-Module in the following way:
+p = subprocess.Popen(['cp','-r', "xyz", "abc"])
+
+There is no need to escape the Shell metacharacters like $, > usw.. 
+If you want to emulate the behaviour of os.system, the optional parameter shell has to be set to true, i.e.
+
+shell=True
+and we have to use a string instead of a list:
+p=subprocess.Popen("cp -r xyz abc", shell=True)
+
