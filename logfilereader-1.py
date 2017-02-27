@@ -19,3 +19,4 @@ for i in os.listdir('/var/log'):
 	if i == "*.log":
 		print(i)
 
+

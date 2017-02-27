@@ -16,3 +16,10 @@ for that we use
 x = os.popen(cmd)
 the output stores in x can be read line by line.(probly a String)
 
+os.rename,os.renames - for recursive creation of dirs to rename a file
+
+os.mkdir,mkdirs - for recursive creation of dirs.
+
+os.chdir - cd
+os.getcwd - pwd
+os.listdir - ls

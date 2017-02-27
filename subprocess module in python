@@ -1,0 +1,25 @@
+subprocess module in python
+
+import subprocess as sb
+
+notable functions and data structures.
+
+sb.Popen()
+sb.getoutput()
+sb.check_output() - any check_ function checks the return code of the command, error if the return code is non-zero.
+sb.call()
+
+all the sb funcs use Popen in their functioning.
+
+it's better to use the shell=False option because otherwise the behaviour of the process is difficult to understand.
+
+
+watching stdout :
+proc = Popen('svn co svn+ssh://myrepo', stdout=PIPE)
+for line in proc.stdout:
+    print line
+
+another option to try arguments is 
+args = 'ls -l'
+argv = args.split()
+Popen( argv )
